@@ -1,0 +1,6 @@
+<navigator url="/pages/home/home" open-type="navigate">
+  <button>开始拍照</button>
+</navigator>
+<navigator url="/pages/choosearea/choosearea" open-type="navigate">
+  <button>选区拍照</button>
+</navigator>

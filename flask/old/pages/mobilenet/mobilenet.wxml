@@ -1,0 +1,15 @@
+<view class="image-container">
+  <!-- <image src="{{img}}" mode='aspectFill'></image> -->
+  <image src="{{img}}" style="height:{{height}}px; width:100%;" mode="aspectFit"></image>
+
+  <view style='width:0px;height:0px;overflow:hidden;'>
+    <!-- <canvas style="height:{{height}}px; width:400%;position:absolute;left:0px;top:0px;" canvas-id="mobileCanvas"></canvas> -->
+        <canvas style="width: 224px; height: 224px;position:absolute;left:-300px;top:-300px;" canvas-id="mobileCanvas"></canvas>
+  </view>
+  <view class="info" style='display:{{display}}'>
+    <view class="detail">
+      <view><text class="detail-text">识别结果:</text></view>
+      <view><text>{{probabilities}}</text></view>
+    </view>
+  </view>
+</view>

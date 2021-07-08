@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='imagesize'>
+    <image src='{{userImage}}'></image>
+    
+  </view>
+  <view class="usermotto">
+    <text>{{motto}}</text>
+    <text>{{value}}</text>
+  </view>
+
+  <view  class="container">
+  <!-- wx:if="{{flag}}" 加入控制是否显示 -->
+  ---------------------------------------------------------------------
+  <ec-canvas  style="width: 100%; height: 500px;" id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+  </view>
+
+
+  <view class='userbtn'>
+        <button bindtap='bindViewTap'>选择图像</button>
+        <button bindtap="takePhoto">相机拍照</button>
+        <button bindtap="upload"> 开始检测 </button>
+  </view>
+</view>

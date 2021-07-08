@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>toGray</title>
+    
+    <!--两张图片格式为左浮动，处在一行-->
+    <style type="text/css">
+        .InputOutput{
+            float: left;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--若 opencv.js 文件加载成功，则会显示“opencv.js is ready.”-->
+    <p id="status">opencv.js is loading...</p>
+    
+    <!--图片读入区域-->
+    <div class="InputOutput">
+        <div class="caption">srcImg<input type="file" id="inputFile" name="file"/></div>
+        <img id="srcImg" alt="No Image"/>       
+    </div>
+    
+    <!--结果展示区域-->
+    <div class="InputOutput">
+        <div class="caption">dstImg</div>
+        <canvas id="dstImg"></canvas>
+    </div>
+    
+    <!--读入图片，并在 canvas 中显示-->
+    <script type="text/javascript">
+        let imgElement=document.getElementById("srcImg");
+        let fileElement=document.getElementById("inputFile");
+        fileElement.addEventListener("change",
+                (e) => {imgElement.src = URL.createObjectURL(e.target.files[0]);},
+                false);
+        
+        imgElement.onload=function(){
+            let src=cv.imread(imgElement);
+            cv.imshow('dstImg', src);
+            src.delete();
+        };
+        
+        function onOpenCvReady(){
+            document.getElementById("status").innerHTML="opencv.js is ready.";
+        }
+    </script>
+    <script async src="../../opencvjs/opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+</body>
+</html>

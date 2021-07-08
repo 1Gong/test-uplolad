@@ -1,0 +1,34 @@
+<!-- <camera wx:if='{{isShowCamera}}' class="camera-box" devic-position="width" flash="off" style='width:{{windowWidth}}px; height:{{windowHeight}}px;' device-position="{{position}}">
+  <cover-view class='camerabgImage'>
+    <cover-view class="active">
+      <cover-image class="active-image" src="https://oss.nodekoa.com/blog/2020/12/0716073342969601272.png"></cover-image>
+      <cover-view class="text">请将样本放入框中，点击拍照进行识别</cover-view>
+      <cover-view class="btns-box" >
+        <cover-image src="/images/change.png" bindtap="reverse"></cover-image>
+        <cover-image src="/images/camera.png" bindtap="takePhotoAction"></cover-image>
+        <cover-image src="/images/choose.png" bindtap="choosePhoto"></cover-image>
+      </cover-view>
+    </cover-view>
+  </cover-view>
+</camera> -->
+
+<camera wx:if='{{isShowCamera}}' class="camera-box" devic-position="width" flash="off" style='width:{{windowWidth}}px; height:{{windowHeight}}px;' device-position="{{position}}">
+  <cover-view class='camerabgImage'>
+    <cover-view class="active">
+      <cover-image class="active-image" src="https://oss.nodekoa.com/blog/2020/12/0716073342969601272.png"></cover-image>
+      <cover-view class="text">请将样本放入框中，点击拍照进行识别</cover-view>
+      <!-- <cover-view class="btn" bindtap="takePhotoAction">
+        <cover-view class="button"></cover-view>
+      </cover-view> -->
+      <cover-view class="btns-box" >
+        <cover-image src="/images/change.png" bindtap="reverse"></cover-image>
+        <cover-image src="/images/camera.png" bindtap="takePhotoAction"></cover-image>
+        <cover-image src="/images/choose.png" bindtap="choosePhoto"></cover-image>
+      </cover-view>
+    </cover-view>
+  </cover-view>
+</camera>
+
+<canvas wx:if='{{isShowImage}}' canvas-id="image-canvas" style='width:{{windowWidth}}px; height:{{windowHeight}}px;'></canvas>
+
+

@@ -1,0 +1,6 @@
+
+<!-- <image src="{{img}}" style="height:{{height}}px; width:100%;" mode="aspectFit"></image> -->
+<view class="container">
+  <!-- <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas> -->
+  <ec-canvas style="width: 100%; height: 500px;" id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+</view>

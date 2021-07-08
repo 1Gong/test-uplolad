@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/request/qingqiu",
+    "pages/begin/demo01",
+    "pages/home/home",
+    "pages/choosearea/choosearea",
+    "pages/logs/logs",
+    "pages/curveCharts/curveCharts",
+    "pages/mobilenet/mobilenet"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}
